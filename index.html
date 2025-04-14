@@ -1,697 +1,147 @@
-
-<!doctype html>
-<html lang="zxx">
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(
+                135deg, 
+                #0a192f 0%, 
+                #112240 50%, 
+                #0a192f 100%
+            );
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            overflow: hidden;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 4rem;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(10, 25, 47, 0) 70%
+            );
+            z-index: -1;
+            animation: glow 4s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 0.3rem;
+            }
+        }
 
-    <!--========= Required meta tags =========-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        .company-name {
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-    <title>AlohaWorld</title>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="images/x-icon"/>
-
-    <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 1rem;
+                bottom: 1.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- backtotop - start -->
-<div class="xb-backtotop">
-    <a href="#" class="scroll">
-        <i class="far fa-arrow-up"></i>
-    </a>
-</div>
-<!-- backtotop - end -->
-
-<!-- preloader start -->
-<div id="xb-loadding">
-    <div class="loader">
-        <div class="plane">
-            <img class="plane-img" src="assets/img/icon/plane.gif" alt="">
-        </div>
-        <div class="earth-wrapper">
-            <div class="earth"></div>
-        </div>
+    <div class="container">
+        <div class="glow"></div>
+        <h1>Coming Soon</h1>
     </div>
-</div>
-<!-- preloader end -->
-
-<div class="body_wrap">
-
-    <!-- header start -->
-    <header class="site-header header-style-one">
-        <div class="header__top-wrap gray-bg">
-            <div class="container">
-                
-                <div class="header__top ul_li_between">
-                    <div class="header__top-cta">
-                        <img src="assets/img/icon/n_pad.svg" alt=""><span>Əlaqə Nömrəsi :</span> +994516117636
-                    </div>
-                    <ul class="header__top-info ul_li">
-                        <li><img src="assets/img/icon/time.svg" alt="">19:200</li>
-                        <li><img src="assets/img/icon/location.svg" alt="">cehennemin isti bucagi</li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-        <div class="header__wrap stricky">
-            <div class="container">
-                <div class="header__inner ul_li_between">
-                    <div class="header__logo">
-                        <a href=""><img style="width:117px;height:68px;object-cover:fit;" src="assets/img/logo/logo.png"alt=""></a>
-                    </div>
-                    <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
-                        <nav class="main-menu collapse navbar-collapse">
-                            <ul>
-                                <li class="active"><a href=""><span>Ana Səhifə</span></a>
-                                    
-                                </li>
-                                
-                                <!-- <li {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}><a href="{% url "about" %}"><span>{% trans "Haqqımızda" %}</span></a></li>
-                                
-                                <li {% if request.resolver_match.url_name == 'blogs' %}class="active"{% endif %}>
-                                    <a href="{% url "blogs" %}"><span>{% trans "Bloqlar" %}</span></a>
-                                    
-                                </li>
-
-
-                                <li {% if request.resolver_match.url_name == 'students' %}class="active"{% endif %}>
-                                    <a href="{% url "students" %}"><span>{% trans "Tələbələr" %}</span></a>
-                                    
-                                </li>
-
-                                <li {% if request.resolver_match.url_name == 'events' %}class="active"{% endif %}>
-                                    <a href="{% url "events" %}"><span>{% trans "Tədbirlər" %}</span></a>
-                                    
-                                </li> -->
-
-
-                                <!-- <li {% if request.resolver_match.url_name == 'contact-us' %}class="active"{% endif %}><a href="{% url "contact-us" %}"><span>{% trans "Əlaqə" %}</span></a></li> -->
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="xb-hamburger-menu">
-                        <div class="xb-nav-mobile">
-                            <div class="xb-nav-mobile-button"><i class="fal fa-bars"></i></div>
-                        </div>
-                    </div>
-                    <ul class="header__action ul_li">
-                        
-                        <li>
-                            <!-- <div class="header__language">
-                                <ul>
-                                    <li><a href="#!" class="lang-btn">
-                                        {% if LANGUAGE_CODE == 'en' %}
-                                        <div class="flag"><img src="{% static "assets/img/icon/us_flag.png" %}" alt=""></div>
-                                        English
-                                        {% endif %}
-                                        {% if LANGUAGE_CODE == 'az' %}
-                                        <div class="flag"><img src="{% static "assets/img/icon/azerbaijan.png" %}" alt=""></div>
-                                        Azərbaycan
-                                        {% endif %}
-                                        {% comment %} {% if LANGUAGE_CODE == 'ru' %}
-                                        <div class="flag"><img src="{% static "assets/img/icon/russia.png" %}" alt=""></div>
-                                        Русский
-                                        {% endif %} {% endcomment %}
-                                        
-                                        <div class="arrow_down"><img src="{% static "assets/img/icon/arrow_down.svg" %}" alt=""></div>
-                                    </a>
-                                        <ul class="lang_sub_list">
-                                            {% for lang in LANGUAGES %}
-                                            <li><a href="/{{ lang.0 }}/{{ request.get_full_path|slice:"4:" }}">{{ lang.0 }}</a></li>
-                                            
-                                            {% endfor %}
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div> -->
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="xb-header-wrap">
-            <div class="xb-header-menu">
-                <div class="xb-header-menu-scroll">
-                    <div class="xb-menu-close xb-hide-xl xb-close"></div>
-                    <div class="xb-logo-mobile xb-hide-xl">
-                        <a href="" rel="home"><img style="width:117px;height:68px;object-cover:fit;" src="{% static "assets/img/logo/logo.png" %}" alt=""></a></div>
-                    
-                    <nav class="xb-header-nav">
-                        <ul class="xb-menu-primary clearfix">
-                            <li  class="menu-item ">
-                                <a href=""><span>Ana Səhifə</span></a>
-                                
-                            </li>
-                            
-                            <!-- <li class="menu-item"><a href="{% url "about" %}"><span>{% trans "Haqqımızda" %}</span></a></li>
-                            
-                            <li class="menu-item">
-                                <a href="{% url "blogs" %}"><span>{% trans "Bloqlar" %}</span></a>
-                               
-                            </li>
-
-                            <li class="menu-item">
-                                <a href="{% url "students" %}"><span>{% trans "Tələbələr" %}</span></a>
-                               
-                            </li>
-
-                            <li class="menu-item">
-                                <a href="{% url "events" %}"><span>{% trans "Tədbirlər" %}</span></a>
-                               
-                            </li>
-
-                            <li class="menu-item"><a href="{% url "contact-us" %}"><span>{% trans "Əlaqə" %}</span></a></li> -->
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="xb-header-menu-backdrop"></div>
-        </div>
-    </header>
-    <!-- header end -->
-
-
-
-
-    <div class="body-overlay"></div>
-
-
-
-
-    <main>
-
-        <!-- hero start -->
-        <section class="hero hero__style-one bg_img" data-background="assets/img/bg/sayt_banner_1.png">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-7">
-                        <div class="hero__content">
-                            <h1 class="wow skewIn">Dünyaya bizimlə salam ver!</span></h1>
-                            <p class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration=".6s">Göstəricinizə uyğun ən yaxşı xarici universitetlərdə təhsil al!</p>
-                            <ul class="xb-list list-unstyled mt-40 mb-60 wow fadeInUp" data-wow-delay="400ms"
-                                data-wow-duration=".6s">
-                                <li><i class="far fa-check"></i>Xaricdə təhsil</li>
-                                <li><i class="far fa-check"></i>Mentor dəstəyi</li>
-                                <li><i class="far fa-check"></i>Ödənişsiz konsultasiya</li>
-                            </ul>
-                            <div class="btns wow fadeInUp" data-wow-delay="600ms" data-wow-duration=".6s">
-                                <a class="thm-btn" href="">Konsultasiya qeydiyyatı</a>
-                                <a class="thm-btn thm-btn--white" href="">Ətraflı məlumat</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- hero end -->
-
-       <!-- country start -->
-       <!-- <section class="country pt-120 pb-130">
-        <div class="container">
-            <div class="row mb-30 align-items-center">
-                <div class="col-lg-6">
-                    <div class="sec-title">
-                        <h2 class="mb-20 wow skewIn">Ölkələr
-                        </h2>
-                    </div>
-                </div>
-               
-            </div>
-            <ul class="xb-country-nav nav nav-tabs ul_li_between mb-65" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link {% if forloop.first %}active{% endif %} " id="xbc-tab{{ forloop.counter }}" data-bs-toggle="tab"
-                            data-bs-target="#xbc-tab-pane{{ forloop.counter }}" type="button" role="tab" aria-controls="xbc-tab-pane{{ forloop.counter }}"
-                            aria-selected="true">{{category.name}}
-                    </button>
-                </li>
-                
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                {% for category in categories %}
-                <div class="tab-pane animated fadeInUp {% if forloop.first %}show active{% endif %}" id="xbc-tab-pane{{ forloop.counter }}" role="tabpanel"
-                     aria-labelledby="xbc-tab{{ forloop.counter }}" tabindex="0">
-                    <div class="xb-country ul_li">
-                        {% for country in category.country.all %}
-                        <div class="xb-item--item">
-                            <a href="{{country.get_absolute_url}}" class="xb-item--inner ul_li">
-                                <div class="xb-item--flag">
-                                    <img src="{{country.image.url}}" alt="">
-                                </div>
-                                <h3 class="xb-item--title">{{country.name}}</h3>
-                            </a>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endfor %}
-
-
-            </div>
-        </div>
-    </section> -->
-    <!-- country end -->
-
-        <!-- visa type start -->
-        <section class="visa type pb-135">
-            <div class="container">
-                <div class="service-wrap pos-rel">
-                    <div class="service-img-wrap">
-                        <div  class="service-bg" data-background="assets/img/bg/service_bg.png"></div>
-                        <div style="margin-top: 20px;" class="service-img wow skewIn" data-wow-delay="100ms"
-                             data-background="assets/img/service/img_01.jpg"></div>
-                    </div>
-                    <div class="sec-title wow skewIn pt-120">
-                        <h2 class="mb-60">Xidmətlərimiz</h2>
-                    </div>
-                    <div class="row justify-content-md-center mt-none-30">
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="xb-service">
-                                <div class="xb-item--inner">
-                                    <div class="xb-item--icon color3 mb-50">
-                                        <img src="assets/img/icon/sv_03.svg" alt="">
-                                    </div>
-                                    <div class="xb-item--holder">
-                                        <h3 class="xb-item--title mb-20"><a href="">qaqa</a>
-                                        </h3>
-                                        <div class="xb-item--description">
-                                            qaqa
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="xb-service">
-                                <div class="xb-item--inner">
-                                    <div class="xb-item--icon color3 mb-50">
-                                        <img src="assets/img/icon/sv_03.svg" alt="">
-                                    </div>
-                                    <div class="xb-item--holder">
-                                        <h3 class="xb-item--title mb-20"><a href="">qaqa</a>
-                                        </h3>
-                                        <div class="xb-item--description">
-                                            qaqa
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 mt-30"></div>
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="xb-service">
-                                <div class="xb-item--inner">
-                                    <div class="xb-item--icon color3 mb-50">
-                                        <img src="assets/img/icon/sv_03.svg" alt="">
-                                    </div>
-                                    <div class="xb-item--holder">
-                                        <h3 class="xb-item--title mb-20"><a href="">qaqa</a>
-                                        </h3>
-                                        <div class="xb-item--description">
-                                            qaqa
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="xb-service">
-                                <div class="xb-item--inner">
-                                    <div class="xb-item--icon color3 mb-50">
-                                        <img src="assets/img/icon/sv_03.svg" alt="">
-                                    </div>
-                                    <div class="xb-item--holder">
-                                        <h3 class="xb-item--title mb-20"><a href="">qaqa</a>
-                                        </h3>
-                                        <div class="xb-item--description">
-                                            qaqa
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mt-30">
-                            <div class="xb-service">
-                                <div class="xb-item--inner">
-                                    <div class="xb-item--icon color3 mb-50">
-                                        <img src="assets/img/icon/sv_03.svg" alt="">
-                                    </div>
-                                    <div class="xb-item--holder">
-                                        <h3 class="xb-item--title mb-20"><a href="">qaqa</a>
-                                        </h3>
-                                        <div class="xb-item--description">
-                                            qaqa
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- visa type end -->
-
-
-       
-       
-
-     
-
-
-       
-
-        <!-- testimonial start -->
-        <!-- <section class="testimonial bg_img pt-130 pb-130" data-bg-color="#EDF3F5" data-background="{% static "assets/img/bg/tm_bg.png" %}">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="sec-title margin-none-md mb-30-xs mb-125">
-                            <h2 class="mb-70 wow skewIn">{% trans "Rəylər:</h2>
-                            <p>{% trans "Tələbələrimiz deyir ki…" %}</p>
-                        </div>
-                        <div class="xb-testimonial__nav ul_li">
-                            <div class="tm-nav-item tm-button-prev"></div>
-                            <div class="tm-nav-item tm-button-next"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="xb-swiper-sliders">
-                            <div class="xb-carousel-inner">
-                                <div class="xb-testimonial-slider xb-swiper-container swiper-container">
-                                    <div class="swiper-wrapper">
-                                        {% for testimonial in testimonials %}
-                                        <div class="swiper-slide xb-swiper-slide">
-                                            <div class="xb-testimonial">
-                                                <div class="xb-item--inner text-center">
-                                                    {% comment %} <div class="xb-item--img">
-                                                        <img src="{% static "assets/img/icon/trustpilot.png" %}" alt="">
-                                                    </div> {% endcomment %}
-                                                    <div style="height:550px;" class="xb-item--content">
-                                                        "{{testimonial.text}}"
-                                                    </div>
-                                                    <div class="xb-item--bottom">
-                                                        <div class="xb-item--ratting">
-                                                            <img src="{% static "assets/img/icon/tr_rattig.png" %}" alt="">
-                                                        </div>
-                                                        <h3 class="xb-item--title">{{testimonial.name}}</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- testimonial end -->
-
-        <!-- faq start -->
-        <section class="faq pt-120 pb-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="xb-faq-content">
-                            <div class="sec-title mb-125">
-                                <h2 class="mb-30 wow skewIn">Tez-tez verilən suallar"</h2>
-                                <p>Bu bölmədə tələbələrimizin bizə sıx-sıx ünvanladığı sualların cavabını topladıq. Sizin də suallarınızın cavabı burada ola bilər.</p>
-                            </div>
-                            <div class="faq-img">
-                                <img src="assets/img/faq/faq_img.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="xb-faq">
-                            <ul class="accordion_box clearfix">
-                                {% for faq in faqs %}
-                                <li class="accordion block {% if forloop.first %}active-block{% endif %} ">
-                                    <div class="acc-btn">
-                                        {{faq.question}}
-                                        <span class="arrow"></span>
-                                    </div>
-                                    <div class="acc_body {% if forloop.first %}current{% endif %} ">
-                                        <div class="content">
-                                            <p>{{faq.answer}}</p>
-                                            
-                                        </div>
-                                    </div>
-                                </li>
-                                {% endfor %}
-                               
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- faq end -->
-
-        <!-- blog start -->
-        <!-- <section class="blog pb-130">
-            <div class="container">
-                <div class="blog-wrap">
-                    <div class="sec-title mb-60 text-center">
-                        <h2 class="mb-30 wow skewIn">{% trans "Son yazılan məqalələrə nəzər sal!" %}</h2>
-                        {% comment %} <p>Explore the most recent addition to our informative articles</p> {% endcomment %}
-                    </div>
-                    <div class="row justify-content-md-center mt-none-30">
-                        {% for blog in blogs|slice:":3" %}
-                        <div style="width:400px;height:455px;" class="col-lg-4 col-md-6 mt-30">
-                            <div  class="xb-blog">
-                                <div class="xb-item--inner">
-                                    <div class="xb-item--img">
-                                        <img style="width:380px;height:220px;object-fit:cover;" src="{{blog.image.url}}" alt="">
-                                    </div>
-                                    <div style="height:250px;" class="xb-item--holder">
-                                        {% comment %} <span class="xb-item--category">Consulting</span> {% endcomment %}
-                                        <ul class="xb-item--meta ul_li mb-20">
-                                            <li><img src="{% static "assets/img/icon/user.svg" %}" alt="">Admin</li>
-                                            <li><img src="{% static "assets/img/icon/calendar.svg" %}" alt="">{{blog.date}}</li>
-                                        </ul>
-                                        <h3 class="xb-item--title border-effect"><a href="blog-single.html">{{blog.name|slice:":44"}}..</a></h3>
-                                        <a class="xb-item--link" href="{{blog.get_absolute_url}}">{% trans "Məqaləni oxu" %}<span><img
-                                                src="{% static "assets/img/icon/right_arrow.svg" %}" alt=""></span></a>
-                                    </div>
-                                    <a class="xb-overlay xb-overlay-link" href="{{blog.get_absolute_url}}"></a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-
-                    <div class="xb-blog-bg" data-bg-color="#EDF3F5" data-background="{% static "assets/img/bg/blog_bg.png" %}"></div>
-                </div>
-            </div>
-        </section> -->
-        <!-- blog end -->
-
-        <!-- newsletter start -->
-       
-        <!-- newsletter end -->
-
-        <!-- <section class="contact contact-pt gray-bg">
-            <div class="container">
-                <div class="xb-contact pos-rel">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="xb-item--inner">
-                                <div class="xb-item--holder mb-25">
-                                    <span><img src="assets/img/icon/n_pad.svg" alt="">Contact Us</span>
-                                    <h3>Do you have questions or went more <br> information?</h3>
-                                </div>
-                                <form class="xb-item--form contact-from" action="#!">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="xb-item--field">
-                                                <span><img src="assets/img/icon/c_user.svg" alt=""></span>
-                                                <input type="text" placeholder="Goladria Gomez">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="xb-item--field">
-                                                <span><img src="assets/img/icon/c_mail.svg" alt=""></span>
-                                                <input type="text" placeholder="e.visa@services.com">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="xb-item--field">
-                                                <span><img src="assets/img/icon/c_select.svg" alt=""></span>
-                                                <select name="select" id="nice-select">
-                                                    <option value="1">Student Visa</option>
-                                                    <option value="2">Tourist Visa</option>
-                                                    <option value="3">Commercial Visa</option>
-                                                    <option value="4">Residence Visa</option>
-                                                    <option value="4">Working Visa</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="xb-item--field">
-                                                <span><img src="assets/img/icon/c_call.svg" alt=""></span>
-                                                <input type="text" placeholder="+888 -8867 3333">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="xb-item--field">
-                                                <span><img src="assets/img/icon/c_message.svg" alt=""></span>
-                                                <textarea name="message" id="message" cols="30" rows="10"
-                                                          placeholder="Write Your Message..."></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="thm-btn" type="submit">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="google-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.254272231177!2d90.3654215!3d23.7985508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1592852423971!5m2!1sen!2sbd"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- contact end --> 
-
-    </main>
-
-
-
-
-
-
-     <!-- footer start -->
-     <footer class="site-footer gray-bg pt-65">
-        <div class="container">
-            <div class="row mt-none-30 pb-60">
-                <div class="col-lg-3 mt-30 col-md-6 footer__custom-col">
-                    <div class="footer__widget">
-                        <h3 class="widget-title">Xaricdə təhsillə bağlı əlavə sualların var? Elə indi, bizimlə əlaqəyə keç!</h3>
-                        <ul class="footer__cta list-unstyled mt-50">
-                            
-                            <li class="ul_li"><span><img src="assets/img/icon/f_call.svg" alt=""></span>+99451611112
-                            </li>
-                            <li class="ul_li"><span><img src="assets/img/icon/f_mail.svg" alt=""></span>qaqa@ghmailcom
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 mt-30 col-md-6 footer__custom-col">
-                    <div class="footer__widget">
-                        <h3 class="widget-title">Daha çoxu üçün:</h3>
-                        <ul class="footer__links list-unstyled">
-                            <li><a href=""><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
-                                                        viewBox="0 0 13 13" fill="none">
-                                    <path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z"
-                                          fill="#B1B4BA"/>
-                                    </svg></span>Haqqımızda</a></li>
-                            <li><a href=""><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
-                                                        viewBox="0 0 13 13" fill="none">
-                                    <path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z"
-                                          fill="#B1B4BA"/>
-                                    </svg></span>Bloqlar</a></li>
-                           
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 mt-30 col-md-6 footer__custom-col">
-                    <div class="footer__widget">
-                        <h3 class="widget-title">Servislər</h3>
-                        <ul class="footer__links list-unstyled">
-                            <li><a href=""><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
-                                                        viewBox="0 0 13 13" fill="none">
-                                    <path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z"
-                                          fill="#B1B4BA"/>
-                                    </svg></span>Əlaqə</a></li>
-                        
-                            
-                        </ul>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="footer__copyright ul_li_between">
-                <div class="footer__copyright-text mt-15">
-                    Copyright © 2023 Aloha World Müəllif hüquqları qorunur.
-                </div>
-                
-            </div>
-        </div>
-    </footer>
-    <!-- footer start -->
-
-</div>
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#contact-form').on('submit', function (e) {
-            e.preventDefault();  // Prevent the default form submission
-
-            $.ajax({
-                url: window.location.href,  // Post the form to the current page URL
-                type: 'POST',
-                data: $('#contact-form').serialize(),
-                dataType: 'json',
-                success: function (data) {
-                    // Clear the message container
-                    $('#message-container').empty();
-
-                    // Display the success message as an alert
-                    if (data.message) {
-                        var alertMessage = '<div class="alert alert-success alert-dismissible show flex items-center mb-2" role="alert"> <i data-lucide="alert-triangle" class="w-6 h-6 mr-2"></i>' +
-                            data.message +
-                            '</div>';
-                        $('#message-container').append(alertMessage);
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-<!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/main.js"></script>
-
+    <div class="company-name">Aloha World</div>
 </body>
-
-
 </html>
